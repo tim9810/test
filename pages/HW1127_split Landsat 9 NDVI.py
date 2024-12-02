@@ -42,8 +42,7 @@ m.split_map(left_layer=url1, right_layer=url2)
 with st.expander("查看程式碼 (Source Code)"):
     with st.echo():
         # 展示的程式碼部分是完整內容
-        left_layer=LC09_117043_20230911.tif
-        right_layer=LC09_117043_20230911.tif
+        m.split_map(left_layer=url1, right_layer=url2)
 
 
 # 在主頁面顯示地圖
