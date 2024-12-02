@@ -38,11 +38,7 @@ m.add_colorbar(
 # 分屏展示 NDVI 影像
 m.split_map(left_layer=url1, right_layer=url2)
 
-# 展開區域以顯示程式碼
-with st.expander("查看程式碼 (Source Code)"):
-    with st.echo():
-        # 展示的程式碼部分是完整內容
-        m.split_map(left_layer=url1, right_layer=url2)
+
 
 
 # 在主頁面顯示地圖
