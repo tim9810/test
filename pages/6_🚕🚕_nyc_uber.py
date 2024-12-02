@@ -4,7 +4,7 @@ import leafmap.foliumap as leafmap
 st.title("Interactive Map with GeoTIFF")
 
 # GeoTIFF 檔案路徑或網址
-tif_url = "https://github.com/tim9810/data2/blob/main/LC09_117042_20230114.tif"
+tif_url = "https://your-geotiff-url.com/your_file.tif"
 
 # 設定互動式地圖
 col1, col2 = st.columns([4, 1])
@@ -22,14 +22,15 @@ with col1:
     )
     m.add_basemap(basemap)
 
-    # 加載 GeoTIFF 檔案
-    m.add_cog_layer(
-        tif_url,
-        name="GeoTIFF Layer",
-        opacity=0.7,
-        fit_bounds=True,
-    )
+    # 使用 add_raster 替代 add_cog_layer
+    try:
+        m.add_raster(
+            tif_url,
+            layer_name="GeoTIFF Layer",
+            opacity=0.7,
+        )
+        m.to_streamlit(height=700)
+    except Exception as e:
+        st.error(f"無法加載 GeoTIFF 檔案: {e}")
 
-    # 在 Streamlit 中顯示地圖
-    m.to_streamlit(height=700)
 
