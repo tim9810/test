@@ -4,7 +4,7 @@ import leafmap.foliumap as leafmap
 st.title("Interactive Map with GeoTIFF")
 
 # GeoTIFF 檔案路徑或網址
-tif_url = "https://your-geotiff-url.com/your_file.tif"
+tif_url = "https://github.com/tim9810/data2/blob/main/LC09_117042_20230130.tif"
 
 # 設定互動式地圖
 col1, col2 = st.columns([4, 1])
