@@ -3,8 +3,16 @@ import leafmap.foliumap as leafmap
 
 st.title("Interactive Map with GeoTIFF")
 
+# 檢查必要模組是否已安裝
+try:
+    import xarray
+    import rioxarray
+except ImportError as e:
+    st.error(f"缺少必要模組: {e}. 請運行以下命令來安裝依賴: pip install xarray rioxarray rasterio")
+    st.stop()
+
 # GeoTIFF 檔案路徑或網址
-tif_url = "https://github.com/tim9810/data2/blob/main/LC09_117042_20230130.tif"
+tif_url = "https://github.com/tim9810/data2/blob/main/LC09_117042_20230114.tif"
 
 # 設定互動式地圖
 col1, col2 = st.columns([4, 1])
@@ -22,7 +30,7 @@ with col1:
     )
     m.add_basemap(basemap)
 
-    # 使用 add_raster 替代 add_cog_layer
+    # 加載 GeoTIFF 檔案
     try:
         m.add_raster(
             tif_url,
