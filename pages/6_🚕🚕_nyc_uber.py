@@ -14,8 +14,8 @@ st.sidebar.info(
 st.title("Split-panel Map for Satellite Imagery")
 
 # 衛星影像文件 URL
-url1 = "https://raw.githubusercontent.com/tim9810/data2/main/LC09_117042_20230114.tif"
-url2 = "https://raw.githubusercontent.com/tim9810/data2/main/LC09_117042_20230130.tif"
+url1 = "https://raw.githubusercontent.com/tim9810/data2/main/DEM6m.tif"
+url2 = "https://raw.githubusercontent.com/tim9810/data2/main/erlin river dsm 1meter.tif"
 
 st.sidebar.info(
     f"""
