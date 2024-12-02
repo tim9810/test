@@ -1,7 +1,6 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
 
-
 st.set_page_config(layout="wide")
 
 st.sidebar.title("Landsat 9 NDVI分割展示")
@@ -19,17 +18,33 @@ url1 = "https://raw.githubusercontent.com/tim9810/data2/main/LC09_117043_2023082
 url2 = "https://raw.githubusercontent.com/tim9810/data2/main/LC09_117043_20230911.tif"
 
 st.sidebar.info(
-       f"""
+    f"""
     左圖: {url1.split('/')[-1]}  
     右圖: {url2.split('/')[-1]}
     """
- )
+)
 
 # 創建地圖對象
 m = leafmap.Map()
+
+# 添加 NDVI 數值的顏色範圍圖例
+m.add_colorbar(
+    title="NDVI",
+    colors=["blue", "white", "green"],  # 設定顏色範圍
+    vmin=-1,  # 最小值
+    vmax=1,   # 最大值
+)
+
+# 分屏展示 NDVI 影像
 m.split_map(left_layer=url1, right_layer=url2)
 
-# 顯示地圖
+# 展開區域以顯示程式碼
+with st.expander("查看程式碼 (Source Code)"):
+    with st.echo():
+        # 展示的程式碼部分是完整內容
+        m.split_map(left_layer=url1, right_layer=url2)
+
+# 在主頁面顯示地圖
 m.to_streamlit(height=700)
 
 
