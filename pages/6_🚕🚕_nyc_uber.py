@@ -1,4 +1,3 @@
-pip install streamlit leafmap
 import streamlit as st
 import leafmap.foliumap as leafmap
 
