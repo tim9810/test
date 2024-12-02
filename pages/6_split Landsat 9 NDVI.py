@@ -1,30 +1,29 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
 
-with st.expander("See source code"):
-    with st.echo():
-    st.set_page_config(layout="wide")
 
-    st.sidebar.title("Landsat 9 NDVI分割展示")
-    st.sidebar.info(
+st.set_page_config(layout="wide")
+
+st.sidebar.title("Landsat 9 NDVI分割展示")
+st.sidebar.info(
     """
     - Landsat 9 NDVI影像，進行分割展示
     - 檔案來源: GEE檔案放入GitHub 
     """
-    )
+)
 
-    st.title("Landsat 9 NDVI分割展示 以半個台灣為例")
+st.title("Landsat 9 NDVI分割展示 以半個台灣為例")
 
 # 衛星影像文件 URL
-    url1 = "https://raw.githubusercontent.com/tim9810/data2/main/LC09_117043_20230826.tif"
-    url2 = "https://raw.githubusercontent.com/tim9810/data2/main/LC09_117043_20230911.tif"
+url1 = "https://raw.githubusercontent.com/tim9810/data2/main/LC09_117043_20230826.tif"
+url2 = "https://raw.githubusercontent.com/tim9810/data2/main/LC09_117043_20230911.tif"
 
-    st.sidebar.info(
+st.sidebar.info(
        f"""
     左圖: {url1.split('/')[-1]}  
     右圖: {url2.split('/')[-1]}
     """
-     )
+ )
 
 # 創建地圖對象
 m = leafmap.Map()
