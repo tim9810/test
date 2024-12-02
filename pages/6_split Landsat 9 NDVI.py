@@ -24,14 +24,6 @@ st.sidebar.info(
     """
 )
 
-# 添加 NDVI 數值的顏色範圍圖例
-m.add_legend(
-    title="NDVI",
-    colors=["blue", "white", "green"],  # 設定顏色範圍
-    vmin=-1,  # 最小值
-    vmax=1,   # 最大值
-)
-
 # 創建地圖對象
 m = leafmap.Map()
 m.split_map(left_layer=url1, right_layer=url2)
