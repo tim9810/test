@@ -23,6 +23,7 @@ st.sidebar.info(
     右圖: {url2.split('/')[-1]}
     """
 )
+
 # 添加 NDVI 數值的顏色範圍圖例
 m.add_colorbar(
     title="NDVI",
