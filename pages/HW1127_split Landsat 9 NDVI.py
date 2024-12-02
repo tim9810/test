@@ -30,7 +30,7 @@ m = leafmap.Map()
 # 添加 NDVI 數值的顏色範圍圖例
 m.add_colorbar(
     title="NDVI",
-    colors=["blue", "white", "green"],  # 設定顏色範圍
+    colors=["black", "white"],  # 設定顏色範圍
     vmin=-1,  # 最小值
     vmax=1,   # 最大值
 )
