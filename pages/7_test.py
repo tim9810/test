@@ -20,7 +20,8 @@ with st.expander("See source code"):
 
         m = leafmap.Map(center=[40, -100], zoom=4)
         cities = "https://raw.github.com/tim9810/gis_final_exam/blob/main/%E5%8F%B0%E5%8D%97%E6%B6%88%E9%98%B2%E5%B1%80wgs84%E5%BA%A7%E6%A8%99utf.csv"
-        regions = "https://raw.github.com/tim9810/gis_final_exam/blob/main/tainung/tainung.geojson"
+        regions = "https://raw.githubusercontent.com/tim9810/gis_final_exam/main/tainung/tainung.geojson"
+
 
         m.add_geojson(regions, layer_name="tw Regions")
         m.add_points_from_xy(
