@@ -9,7 +9,7 @@ st.title("選擇不同的 GeoTIFF 影像進行顯示")
 
 # **四個獨立的 GeoTIFF 檔案路徑**
 tif_files = {
-    "地震模型 1": "data/model_1.tif",
+    "地震模型 1": "https://github.com/tim9810/sar_image/blob/main/2025_0101_0113_decending/subset_0_of_S1A_IW_SLC__1SDV_20250101_split_Stack_esd_deb_ifg_ML_flt_unwrapping_TC.tif",
     "地震模型 2": "data/model_2.tif",
     "地震模型 3": "data/model_3.tif",
     "地震模型 4": "data/model_4.tif",
