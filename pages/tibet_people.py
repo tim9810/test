@@ -1,9 +1,8 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
-import rasterio
+import pydeck as pdk
+import pandas as pd
 import numpy as np
-import folium
-from streamlit_folium import st_folium
 
 st.title("選擇不同的 GeoTIFF 影像進行顯示")
 
